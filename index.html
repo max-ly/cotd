@@ -20,21 +20,8 @@
 	
 	<!-- Add time script -->
 	<script>
-	function startTime() {
-		var today = new Date();
-		var h = today.getHours();
-		var m = today.getMinutes();
-		var s = today.getSeconds();
-		m = checkTime(m);
-		s = checkTime(s);
-		document.getElementById('time').innerHTML =
-		h + ":" + m + ":" + s;
-		var t = setTimeout(startTime, 500);
-	}
-	function checkTime(i) {
-		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-		return i;
-	}
+	var d = new Date(hours, minutes, seconds)
+	document.getElementById("timenow").innerHTML = d;
 	</script>
 	
     <meta charset="utf-8">
@@ -93,7 +80,7 @@
         <div class="demo-container mdl-grid">
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
-            <div class="time"></div>
+            <div class="timenow"></div>
               <p>
 				Text should go here at some point.
               </p>
@@ -102,7 +89,7 @@
         <footer class="demo-footer mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
             <ul class="mdl-mini-footer--link-list">
-              <li>Addition 0.1</li>
+              <li>Addition 0.1.1</li>
             </ul>
           </div>
         </footer>
