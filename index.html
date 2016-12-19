@@ -84,7 +84,10 @@
 	<!-- Exciting time code stuff -->
 	<script type="text/javascript">
 	document.getElementById('displaytime').innerHTML = "Today's date is " + moment().format('MMMM Do YYYY') + ". (#" + moment().format('ddmmyy') + ")";
-	var date = moment().format('ddmmyy')
+	var day = moment().format('DD')
+	var month = moment().format('MM')
+	var year = moment().format('YY')
+	var date = day + month + year
 	document.getElementById('bgofbanner').style.backgroundColor = '#' + date();
 	setInterval(updateTime, 1000);
 	</script>
