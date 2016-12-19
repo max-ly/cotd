@@ -57,26 +57,22 @@
           <div class="mdl-layout-spacer"></div>
         </div>
       </header>
-      <div class="demo-ribbon">
-	  <style>
-	  .demo-ribbon {
-	  background-color:red; }
-	  </style>
+      <div class="demo-ribbon" id="bgofbanner">
 	  </div>
       <main class="demo-main mdl-layout__content">
         <div class="demo-container mdl-grid">
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
             <div class="timenow"></div>
-              <p>
-				Text should go here at some point.
+              <p id="displaytime">
+				Text display error.
               </p>
           </div>
         </div>
         <footer class="demo-footer mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
             <ul class="mdl-mini-footer--link-list">
-              <li>Last updated: 15:12 UTC</li>
+              <li>Last updated: 15:23 UTC</li>
             </ul>
           </div>
         </footer>
@@ -84,5 +80,13 @@
     </div>
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 	<script src="https://momentjs.com/downloads/moment.js"></script>
+	
+	<!-- Exciting time code stuff -->
+	<script type="text/javascript">
+	document.getElementById('displaytime').innerHTML = moment().format('MMMM Do YYYY');
+	var date = moment().format('ddmmyy')
+	document.getElementById("bgofbanner").style.backgroundColor = '#' + date;
+	setInterval(updateTime, 1000);
+	</script>
   </body> 
 </html>
