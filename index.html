@@ -72,7 +72,7 @@
         <footer class="demo-footer mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
             <ul class="mdl-mini-footer--link-list">
-              <li>Last updated: 15:26 UTC</li>
+              <li>Last updated: 15:34 UTC</li>
             </ul>
           </div>
         </footer>
@@ -87,7 +87,8 @@
 	var day = moment().format('DD')
 	var month = moment().format('MM')
 	var year = moment().format('YY')
-	var date = day + month + year
+	var datepreconc = day.concat(month)
+	var date = datepreconc.concat(year)
 	document.getElementById('bgofbanner').style.backgroundColor = '#' + date();
 	setInterval(updateTime, 1000);
 	</script>
