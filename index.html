@@ -72,7 +72,7 @@
         <footer class="demo-footer mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
             <ul class="mdl-mini-footer--link-list">
-              <li>Last updated: 15:34 UTC</li>
+              <li>Last updated: 15:35 UTC</li>
             </ul>
           </div>
         </footer>
@@ -84,9 +84,9 @@
 	<!-- Exciting time code stuff -->
 	<script type="text/javascript">
 	document.getElementById('displaytime').innerHTML = "Today's date is " + moment().format('MMMM Do YYYY') + ". (#" + moment().format('ddmmyy') + ")";
-	var day = moment().format('DD')
-	var month = moment().format('MM')
-	var year = moment().format('YY')
+	var day = moment().format('day')
+	var month = moment().format('month')
+	var year = moment().format('year')
 	var datepreconc = day.concat(month)
 	var date = datepreconc.concat(year)
 	document.getElementById('bgofbanner').style.backgroundColor = '#' + date();
